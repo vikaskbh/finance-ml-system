@@ -1,0 +1,97 @@
+# -------------------------------------
+# PYTHON / ENV
+# -------------------------------------
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# -------------------------------------
+# SECRETS
+# -------------------------------------
+.env
+.env.*
+*.key
+*.pem
+*.crt
+
+# -------------------------------------
+# DATASETS / RAW DATA
+# Avoid pushing large or sensitive data
+# -------------------------------------
+training/data/*
+rag/ingest/raw/*
+rag/ingest/downloads/*
+rag/vectorstore/*
+rag/retrieval/cache/*
+
+# Allow small sample files
+!training/data/sample_*.*
+!rag/ingest/sample_*.*
+!rag/vectorstore/sample_*.*
+!rag/retrieval/sample_*.*
+!rag/ingest/README.md
+
+# -------------------------------------
+# MODEL FILES / CHECKPOINTS
+# HuggingFace, QLoRA, PyTorch artifacts
+# -------------------------------------
+training/models/*
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+
+# Allow only config placeholders
+!training/models/README.md
+
+# -------------------------------------
+# TGI / vLLM / INFERENCE ARTIFACTS
+# -------------------------------------
+inference/server/cache/*
+inference/server/logs/*
+
+# -------------------------------------
+# JUPYTER NOTEBOOKS
+# -------------------------------------
+*.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# -------------------------------------
+# NODE / REACT (UI)
+# -------------------------------------
+ui/node_modules/
+ui/.next/
+ui/dist/
+ui/build/
+ui/.cache/
+
+# -------------------------------------
+# DOCKER
+# -------------------------------------
+docker-compose.override.yml
+docker/*.log
+*.dockerfile.swp
+**/docker-cache/
+**/tmp/
+
+# -------------------------------------
+# NGINX
+# -------------------------------------
+infra/nginx/logs/*
+infra/nginx/cache/*
+infra/nginx/temp/*
+
+# -------------------------------------
+# EDITOR / OS / MISC
+# -------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.log
