@@ -24,7 +24,7 @@ class Query(BaseModel):
 
 @app.get("/")
 def home():
-    return {"message": "Finance ML Inference API"}
+    return {"message": "<h3><a href='https://www.linkedin.com/in/vikaskbh/' style='text-decoration:none'>Hi Vikas here.</a></h3><br/>I am building Forex ML App for learing AI hardway.<br/><br/><b>So stay tuned for updates.</b>"}
 
 @app.post("/sentiment")
 def sentiment(q: Query):
